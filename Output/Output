@@ -2,7 +2,7 @@ This file is here to ensure the Output folder is made for the github. I am bad a
 All of the files you will use to mod the randomizer into Miitopia will be here.
 
 Use the custom "enemy.sarc" if you are playing on Console/Ryujinx to ensure faceless boss enemies
-won't spawn (which cause crashes).
+won't spawn (which cause crashes). Do NOT use this on 3DS.
 
 Might still cause crashes later on with certain boss cutscenes. If so, delete the enemy.sarc to get past those
 cutscenes and then re add it after.

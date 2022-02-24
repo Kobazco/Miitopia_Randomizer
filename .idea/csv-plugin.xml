@@ -234,14 +234,14 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\Output\JobInfo.csv">
+        <entry key="\NPCList.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\Output\Treasure\TreasureBox.csv">
+        <entry key="\Output\NPC\NPCList.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -255,35 +255,14 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\Output\World01\W1_0_06_enemy.csv">
+        <entry key="\Output\World02\W2_1_02_enemy.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\Output\World01\W1_0_08_enemy.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\Output\World01\W1_0_09_enemy.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\Output\World01\W1_0_11_enemy.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\Output\World01\W1_0_12_enemy.csv">
+        <entry key="\Output\World03\W3_1_01_enemy.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
