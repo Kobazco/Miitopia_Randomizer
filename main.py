@@ -26,7 +26,7 @@ print ('NPCs\n\n'
 
 def main():
     Directories = ['World01', 'World02', 'World03', 'World04', 'World05', 'World06', 'World07', 'World08', 'Dish',
-                   'Equipment', 'Job', 'NPC', 'Treasure']
+                   'Equipment', 'Job', 'NPC', 'Treasure', 'Enemy']
     for Directories in Directories:
         output = 'Output/{}'.format(Directories)
         if not os.path.exists(output):
@@ -51,6 +51,7 @@ def main():
         exit()
     elif choice in NPC:
         import NPCs
+        import enemies
         print('NPCs randomized\n')
         main()
     else:

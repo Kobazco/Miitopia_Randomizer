@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="E:\Switch Modding\Miitopia\Full Game\csvs\enemyInfo.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\Input\World01\W1_0_04_enemy.csv">
           <value>
             <Attribute>
@@ -235,6 +242,13 @@
           </value>
         </entry>
         <entry key="\NPCList.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Output\Enemy\enemyInfo.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
