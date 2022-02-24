@@ -3,17 +3,17 @@ Miitopia Randomizer Beta (Switch & 3DS)
 Run main.py and choose as many of the randomization options as you'd like. Details
 on what option does what are listed when you run main.py
 
-## Options:
-# -Enemy
+# Options:
+###### -Enemy
     Randomizes the enemies that appear in areas, based on their internal "level" in order to ensure
     you fight enemies of similar strength.
     Randomizes Battle Backgrounds (Switch only)
     Randomizes Battle Music
 
-# -Jobs
+###### -Jobs
     Randomizes the world in which Jobs are unlocked. Also randomizes the look of what weapon a Job uses
 
-# -Treasure
+###### -Treasure
     Randomizes the contents of all Treasure Chests. Enemy (trap chests) currently spawn an empty battle.
 
 # Requirements:
