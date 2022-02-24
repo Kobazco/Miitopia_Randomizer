@@ -3,7 +3,7 @@ Miitopia Randomizer Beta
 Run main.py and choose as many of the randomization options as you'd like. Details
 on what option does what are listed when you run main.py
 
-Requriements: 
+Requirements:
 - Switch-Toolbox https://github.com/KillzXGaming/Switch-Toolbox/releases
 - Download experimental latest
 - A modded switch or switch emulator (Ryujinx is suggested due to Mii Maker support)
@@ -40,6 +40,7 @@ Jobs Instructions:
 7. Place modified job.sarc file in romfs\cmn\param\ or wherever your mods are located
 
 Treasure Instructions:
+*TRAP CHESTS CURRENTLY DO NOT WORK*
 1. Run treasure.py
 2. Navigate to romfs\cmn\param\stage\
 3. Open Treasure.sarc in Switch-Toolbox
@@ -47,3 +48,10 @@ Treasure Instructions:
 5. Replace with "TreasureBox.csv" from Output\Treasure
 6. Save
 7. Place modified Treasure.sarc file in romfs\cmn\param\stage\ or wherever your mods are located
+
+If crashing on battle starts:
+    Use the custom "enemy.sarc" if you are playing on Console/Ryujinx to ensure faceless boss enemies
+    won't spawn (which cause crashes).
+
+    Might still cause crashes later on with certain boss cutscenes. If so, delete the enemy.sarc to get past those
+    cutscenes and then re add it after.
