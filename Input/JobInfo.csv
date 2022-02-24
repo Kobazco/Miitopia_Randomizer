@@ -1,0 +1,14 @@
+Fighter,1,,,Sword,GROUP_JOB_FIGHTER
+Wizard,1,,,Stick,GROUP_JOB_WIZARD
+Priest,1,,,Wand,GROUP_JOB_PRIEST
+Thief,1,,,Dagger,GROUP_JOB_THIEF
+Idol,1,1,,Mic,GROUP_JOB_IDOL
+Vampire,0,,,Bat,GROUP_JOB_VAMPIRE
+Cook,1,,,Fryingpan,GROUP_JOB_COOK
+Tank,3,,,Shell,GROUP_JOB_TANK
+Devil,2,,,Spear,GROUP_JOB_DEVIL
+Royalty,3,,,Fan,GROUP_JOB_ROYALTY
+Flower,3,,,Leaf,GROUP_JOB_FLOWER
+Scientist,2,,,Bottle,GROUP_JOB_SCIENTIST
+Cat,2,,,Glove,GROUP_JOB_CAT
+Elf,0,,,Bow,GROUP_JOB_ELF
