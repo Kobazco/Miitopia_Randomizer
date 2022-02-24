@@ -28,24 +28,25 @@ The fight against the Mini Slime as well as the first area afterwards are not
 randomized in order to avoid softlocking. Randomization of enemies/stages begins
 in the first area unlocked after getting Inn access.
 
+# Instructions
 Instructions are made with Switch-Toolbox in mind for .sarc editing
 
 Follow these instructions based on what you ran with main.py
 
-# Enemy Randomization Instructions:
+## Enemy Randomization Instructions:
 1. Extract ALL of the contents of the following .sarc files to their own unique
 folders based on world# romfs\cmn\param\stage\World0X
 2. So you should have a bunch of folders named World 01, World02, etc. with all
 of their respective .csv files in said folders
-3.Navigate to the Output folder
-3. Take all of the "World" folders and drag them to the folder containing your
+3. Navigate to the Output folder
+4. Take all of the "World" folders and drag them to the folder containing your
 extracted World csvs. Click "yes" to replace
-4. In Switch-Toolbox, open World01.sarc. Click "repack" and select your modified
+5. In Switch-Toolbox, open World01.sarc. Click "repack" and select your modified
 World01 folder. Save the file. Repeat for every "World" folder
-5. Place the modified .sarc files in your romfs\cmn\param\stage\ folder for your
+6. Place the modified .sarc files in your romfs\cmn\param\stage\ folder for your
 modded switch or emulator. Wherever you place your mods
 
-# Jobs Instructions:
+## Jobs Instructions:
 1. Navigate to romfs\cmn\param\
 2. Open job.sarc in Switch-Toolbox
 3. Right click "JobInfo.csv" and click "replace raw data"
@@ -53,7 +54,7 @@ modded switch or emulator. Wherever you place your mods
 5. Save
 6. Place modified job.sarc file in romfs\cmn\param\ or wherever your mods are located
 
-# Treasure Instructions:
+## Treasure Instructions:
 *TRAP CHESTS CURRENTLY DO NOT WORK*
 1. Navigate to romfs\cmn\param\stage\
 2. Open Treasure.sarc in Switch-Toolbox
