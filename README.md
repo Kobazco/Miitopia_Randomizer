@@ -63,8 +63,23 @@ modded switch or emulator. Wherever you place your mods
 5. Save
 6. Place modified Treasure.sarc file in romfs\cmn\param\stage\ or wherever your mods are located
 
+## NPC Instructions
+1. Navigate to romfs\cmn\param
+2. Open npc.sarc in Switch-Toolbox
+3. Right click on "NPCList.csv" and click "replace raw data"
+4. Replace with "NPCList.csv" from Output\NPC
+5. Save
+6. Navigate to romfs\cmn\param
+7. Open enemy.sarc (or use the pre provided one if using it)
+8. Right click on "enemyInfo.csv" and clock "repalce raw data"
+9. Replace with "enemyInfo.csv" from Output\Enemy
+10. Save
+11. Place modified npc.sarc and enemy.sarc in romfs\cmn\param\stage in your mods directory.
+
 If crashing on battle starts:
     Use the custom "enemy.sarc" if you are playing on Console/Ryujinx to ensure faceless boss enemies
     won't spawn (which cause crashes).
     Might still cause crashes later on with certain boss cutscenes. If so, delete the enemy.sarc to get past those
     cutscenes and then re add it after.
+
+**DO NOT** use the pre provided "enemy.sarc" on 3DS.
