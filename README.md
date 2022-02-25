@@ -71,10 +71,10 @@ modded switch or emulator. Wherever you place your mods
 5. Save
 6. Navigate to romfs\cmn\param
 7. Open enemy.sarc (or use the pre provided one if using it)
-8. Right click on "enemyInfo.csv" and clock "repalce raw data"
+8. Right click on "enemyInfo.csv" and clock "replace raw data"
 9. Replace with "enemyInfo.csv" from Output\Enemy
 10. Save
-11. Place modified npc.sarc and enemy.sarc in romfs\cmn\param\stage in your mods directory.
+11. Place modified npc.sarc and enemy.sarc in romfs\cmn\param\ in your mods directory.
 
 If crashing on battle starts:
     Use the custom "enemy.sarc" if you are playing on Console/Ryujinx to ensure faceless boss enemies
