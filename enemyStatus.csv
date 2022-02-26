@@ -16,9 +16,9 @@ Butterfly1,30,0,26,12,15,9,5,65,25,Butterfly00,45,Butterfly01,5,Butterfly02,0
 Golem0,250,0,45,10,0,9,9,0,100,Golem00,0,Golem01,80,Golem02,20
 Rock0,34,0,32,30,0,2,5,110,45,Rock00,45,Rock01,5,Rock02,0
 Cloud1,40,0,34,14,16,11,5,126,32,Cloud00,45,Cloud01,5,Cloud02,0
-Griffon0,150,0,42,15,0,12,8,170,120,Griffon00,10,Griffon01,40,Griffon02,0
-Griffon0_Boss,280,0,52,15,0,12,10,0,120,Griffon00,0,Griffon01,80,Griffon02,20
-EatPlant0,52,0,35,15,0,24,9,144,58,EatPlant00,30,EatPlant01,20,EatPlant02,5
+Griffon0,150,0,42,15,0,12,9,170,120,Griffon00,10,Griffon01,40,Griffon02,0
+Griffon0_Boss,280,0,52,15,0,12,12,0,120,Griffon00,0,Griffon01,80,Griffon02,20
+EatPlant0,52,0,35,15,0,24,8,144,58,EatPlant00,30,EatPlant01,20,EatPlant02,5
 Devil0,62,0,44,20,0,25,5,140,65,Devil00,45,Devil01,5,Devil02,0
 Devil1_Boss,360,0,60,16,0,15,11,0,120,Devil00,0,Devil01,80,Devil02,20
 GoblinMagic,42,0,36,15,19,13,6,153,72,Goblin00,45,Goblin01,5,Goblin02,0
@@ -46,7 +46,7 @@ Shield0,300,0,35,20,0,12,10,0,150,Shield00,0,Shield01,80,Shield02,20
 Sword0,250,0,48,15,0,12,10,0,150,Sword00,0,Sword01,80,Sword02,20
 Pharaoh0,700,0,56,35,0,13,13,0,500,Pharaoh00,0,Pharaoh01,0,Pharaoh02,100
 Cactus2,50,0,28,18,0,13,8,98,40,Cactus00,45,Cactus01,5,Cactus02,0
-EatPlant1,30,0,25,14,0,20,7,150,42,EatPlant00,30,EatPlant01,20,EatPlant02,5
+EatPlant1,30,0,25,14,0,20,5,150,42,EatPlant00,30,EatPlant01,20,EatPlant02,5
 Cobra0,300,0,40,12,0,16,10,0,400,Cobra00,0,Cobra01,0,Cobra02,100
 Painting1,350,0,34,15,13,9,11,0,300,Painting00,0,Painting01,80,Painting02,20
 Golem3,100,0,50,16,0,10,7,75,70,Golem00,45,Golem01,5,Golem02,0
@@ -95,7 +95,7 @@ Painting4,700,0,58,28,14,20,12,0,900,Painting00,0,Painting01,80,Painting02,20
 Satan0,1800,0,88,30,24,15,18,0,2000,Satan00,0,Satan01,0,Satan02,100
 Shield1,220,0,45,50,0,12,10,0,350,Shield00,0,Shield01,0,Shield02,100
 Sword1,150,0,70,20,0,12,10,0,350,Sword00,0,Sword01,0,Sword02,100
-Devil1,120,0,65,22,0,15,7,140,180,Devil00,45,Devil01,5,Devil02,0
+Devil1,120,0,65,22,0,15,8,140,180,Devil00,45,Devil01,5,Devil02,0
 Mimit1,5,0,90,10000,10000,100,10,0,2000,Mimit00,0,Mimit01,0,Mimit02,0
 Devil5,80,0,75,30,0,15,9,0,220,Devil00,45,Devil01,5,Devil02,0
 Butterfly6,22,0,40,18,0,30,10,200,32,Butterfly00,15,Butterfly01,1,Butterfly02,0

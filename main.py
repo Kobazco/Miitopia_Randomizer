@@ -1,5 +1,6 @@
 import os
 import sys
+import sarc
 
 Enemy = {'-Enemy', '-enemy'}
 Jobs = {'-Jobs', '-jobs'}
@@ -26,7 +27,7 @@ print ('NPCs\n\n'
 
 def main():
     Directories = ['World01', 'World02', 'World03', 'World04', 'World05', 'World06', 'World07', 'World08', 'Dish',
-                   'Equipment', 'Job', 'NPC', 'Treasure', 'Enemy']
+                   'Equipment', 'Job', 'NPC', 'Treasure', 'Enemy', 'romfs/cmn/param/stage']
     for Directories in Directories:
         output = 'Output/{}'.format(Directories)
         if not os.path.exists(output):
@@ -60,3 +61,11 @@ def main():
 
 
 main()
+
+# TODO: List of planned features
+#   Enemy Skills
+#   Grub Bonuses
+#   New Enemies for greater variety
+#   Enemy Faces
+#   NPC Clothes Colors
+#   Include Job outfits in NPC Model Randomization
