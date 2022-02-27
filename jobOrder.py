@@ -21,7 +21,7 @@ class Jobs:
         return "% s unlocks at world" " % s and uses " "% s" % (self.name, self.unlock, self.weapon)
 
 
-with open('Input/JobInfo.csv') as csv_file:
+with open('Input/Job/JobInfo.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
 
@@ -30,10 +30,10 @@ with open('Input/JobInfo.csv') as csv_file:
         # print(job)
         line_count += 1
 
-with open('Input/JobInfo.csv') as csv_file:
+with open('Input/Job/JobInfo.csv') as csv_file:
     job_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
-    with open('Output/JobInfo.csv', mode="w", newline="") as out_file:
+    with open('Output/Job/JobInfo.csv', mode="w", newline="") as out_file:
         for row in job_reader:
             rowrando = random.randint(1, 3)
             randIndex = random.randrange(len(Jobs.instances))

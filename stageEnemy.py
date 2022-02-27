@@ -2,6 +2,8 @@ import csv
 import random
 import os
 import sys
+import subprocess
+import sarc
 
 
 # Get Enemy names and levels
@@ -20,6 +22,9 @@ def dsmode():
         ds = 1
     elif choice in dsno:
         ds = 0
+        # Switch custom face info file
+        subprocess.run(["sarc", "update", "Input/Enemy/enemyFaceConfig.csv", "Output/romfs/cmn/param/enemy.sarc",
+                        "--base-path", "Input/Enemy"])
     else:
         sys.stdout.write("Please type Y or N in order to indicate you are using the 3DS version or not\n")
         dsmode()

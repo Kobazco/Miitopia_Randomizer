@@ -1,6 +1,7 @@
 import os
 import sys
 import sarc
+import subprocess
 
 Enemy = {'-Enemy', '-enemy'}
 Jobs = {'-Jobs', '-jobs'}
@@ -39,14 +40,31 @@ def main():
     if choice in Enemy:
         import stageEnemy
         print('Enemies randomized\n')
+
+        # Modify relevant .sarc files
+        print('Building .sarc archives...\n')
+        subprocess.run(["sarc", "update", "Output/World01", "Output/romfs/cmn/param/stage/World01.sarc"])
+        subprocess.run(["sarc", "update", "Output/World02", "Output/romfs/cmn/param/stage/World02.sarc"])
+        subprocess.run(["sarc", "update", "Output/World03", "Output/romfs/cmn/param/stage/World03.sarc"])
+        subprocess.run(["sarc", "update", "Output/World04", "Output/romfs/cmn/param/stage/World04.sarc"])
+        subprocess.run(["sarc", "update", "Output/World05", "Output/romfs/cmn/param/stage/World05.sarc"])
+        subprocess.run(["sarc", "update", "Output/World06", "Output/romfs/cmn/param/stage/World06.sarc"])
         main()
     elif choice in Jobs:
         import jobOrder
         print('Job Order & Weapon look randomized\n')
+
+        # Modify relevant .sarc files
+        print('Building .sarc archives...\n')
+        subprocess.run(["sarc", "update", "Output/Job", "Output/romfs/cmn/param/job.sarc"])
         main()
     elif choice in Treasure:
         import treasure
         print('Treasure chests randomized\n')
+
+        # Modify relevant .sarc files
+        print('Building .sarc archives...\n')
+        subprocess.run(["sarc", "update", "Output/Treasure", "Output/romfs/cmn/param/stage/Treasure.sarc"])
         main()
     elif choice in Exit:
         exit()
@@ -54,6 +72,11 @@ def main():
         import NPCs
         import enemies
         print('NPCs randomized\n')
+
+        # Modify relevant .sarc files
+        print('Building .sarc archives...\n')
+        subprocess.run(["sarc", "update", "Output/NPC", "Output/romfs/cmn/param/npc.sarc"])
+        subprocess.run(["sarc", "update", "Output/Enemy", "Output/romfs/cmn/param/enemy.sarc"])
         main()
     else:
         sys.stdout.write("Please use one of the options listed below\n")
@@ -63,6 +86,7 @@ def main():
 main()
 
 # TODO: List of planned features
+#   Auto creation of .sarc files
 #   Enemy Skills
 #   Grub Bonuses
 #   New Enemies for greater variety

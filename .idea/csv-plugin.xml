@@ -3,7 +3,35 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="E:\Switch Modding\Miitopia\Full Game\rando\switchFaceConfig.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\Input\Enemy\enemyInfo.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Input\JobInfo.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Input\Treasure\RandomTreasureBox.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Input\Treasure\TreasureBox.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -248,7 +276,21 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\Output\JobInfo.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\Output\NPC\NPCList.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Output\Treasure\TreasureBox.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
