@@ -38,6 +38,13 @@ in the first area unlocked after getting Inn access.
 5. Enter your desired Randomization options
 6. Move the `romfs` folder from Output to the location of your mods and say "yes" to replace all if prompted
 
+### No Such File or Directory error
+1. Open command prompt
+2. `cd file path for where you extracted the randomizer`
+3. Example would be `cd C:/Users/Username/Downloads/Miitopia_Randomizer`
+4. `python main.py`
+5. Go to step 5 of Instructions.
+
 ### Mod Location/Folder
 - For Atmosphere cfw users, this is `atmosphere/contents/01003DA010E8A000/` Place the romfs folder here
 - For emulator users, both Ryujinx and Yuzu you can just right click the game and select "view mod location" and place the romfs folder there.
