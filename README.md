@@ -51,5 +51,5 @@ in the first area unlocked after getting Inn access.
 
 
 ### Credits
-- @Conniecpu for an incredible amount of assistance and teaching me how to use python. Definitely would not have been in a usable state like this without her.
+- @Connicpu for an incredible amount of assistance and teaching me how to use python. Definitely would not have been in a usable state like this without her.
 - Sarc python reader and writer by @leoetlino and @BravelyPeculiar https://github.com/zeldamods/sarc
