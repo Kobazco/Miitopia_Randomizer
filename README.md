@@ -48,3 +48,8 @@ in the first area unlocked after getting Inn access.
 ### Mod Location/Folder
 - For Atmosphere cfw users, this is `atmosphere/contents/01003DA010E8A000/` Place the romfs folder here
 - For emulator users, both Ryujinx and Yuzu you can just right click the game and select "view mod location" and place the romfs folder there.
+
+
+### Credits
+- @Conniecpu for an incredible amount of assistance and teaching me how to use python. Definitely would not have been in a usable state like this without her.
+- Sarc python reader and writer by @leoetlino and @BravelyPeculiar https://github.com/zeldamods/sarc
