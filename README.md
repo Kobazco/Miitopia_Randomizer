@@ -1,4 +1,4 @@
-## Miitopia Randomizer Beta (Switch & 3DS)
+## Miitopia Randomizer (Switch & 3DS)
 
 
 ### Requirements
@@ -52,3 +52,4 @@ Randomization of enemies/stages begins in the first area unlocked after getting 
 ### Credits
 - @Connicpu for an incredible amount of assistance and teaching me how to use python. Definitely would not have been in a usable state like this without her.
 - Sarc python reader and writer by @leoetlino and @BravelyPeculiar https://github.com/zeldamods/sarc
+- @CommandMC for refactoring the entire project.
