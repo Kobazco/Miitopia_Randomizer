@@ -1,8 +1,0 @@
-Boss0,Boss0,Goblin10,Goblin10,Goblin10,Goblin10,Goblin10,Goblin11,,,W7_DefeatTower8Gods_1,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_BIGBOSS,,"FlowchartDemo,PreBossGodSeries_01","FlowchartDemo,LoseBossGodSeries_00",507
-Boss1,Boss1,Golem10,,,,,,,,W7_DefeatTower8Gods_2,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_BIGBOSS,,"FlowchartDemo,PreBossGodSeries_02","FlowchartDemo,LoseBossGodSeries_01",508
-Boss2,Boss2,Pharaoh10,Pharaoh10,Pharaoh10,,,,,,W7_DefeatTower8Gods_3,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_BIGBOSS,,"FlowchartDemo,PreBossGodSeries_03","FlowchartDemo,LoseBossGodSeries_02",509
-Boss3,Boss3,Serpent10,,,,,,,,W7_DefeatTower8Gods_4,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_BIGBOSS,,"FlowchartDemo,PreBossGodSeries_04","FlowchartDemo,LoseBossGodSeries_03",510
-Boss4,Boss4,Burger10,Burger10,Burger10,Burger10,,,,,W7_DefeatTower8Gods_5,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_BIGBOSS,,"FlowchartDemo,PreBossGodSeries_05","FlowchartDemo,LoseBossGodSeries_04",511
-Boss5,Boss5,IceQueen10,Devil10,IceQueen10,,,,,,W7_DefeatTower8Gods_6,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_BIGBOSS,,"FlowchartDemo,PreBossGodSeries_06","FlowchartDemo,LoseBossGodSeries_05",512
-Boss6,Boss6,Satan10,SuperSatan10,,,,,,,W7_DefeatTower8Gods_7,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_BLACK_SAGE,,"FlowchartDemo,PreBossGodSeries_07","FlowchartDemo,LoseBossGodSeries_06",513
-Boss7,Boss7,Mimit11,Mimit10,Mimit11,,,,,,W7_DefeatAllTower2Boss,,"IsBoss,IsNotEscape",Space03,BGM_BATTLE_RARE,,InnForward,"FlowchartDemo,LoseBossGodSeries_07",514
