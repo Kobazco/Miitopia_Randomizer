@@ -1,49 +1,48 @@
-Miitopia Randomizer Beta (Switch & 3DS)
+## Miitopia Randomizer Beta (Switch & 3DS)
 
-# Requirements:
+
+### Requirements
 - A modded switch/3DS or emulator (Ryujinx is suggested due to Mii Maker support, Citra for 3DS)
 - A Miitopia romfs dump (We cannot legally provide this)
 - Knowledge of how to install mods on cfw or your emulator of choice
-- Python 3.6+ (**64 bit version**)
-- sarc.py `pip install sarc`
 
-# Options:
-###### -Enemy
-    Randomizes the enemies that appear in areas, based on their internal "level" in order to ensure
-    you fight enemies of similar strength.
-    Randomizes Battle Backgrounds (Switch only)
-    Randomizes Battle Music
 
-###### -Jobs
-    Randomizes the world in which Jobs are unlocked. Also randomizes the look of what weapon 
-    a Job uses
+### Options
 
-###### -Treasure
-    Randomizes the contents of all Treasure Chests. Enemy (trap chests) currently spawn an 
-    empty battle.
+#### GUI
+When hovering over an option in the GUI, a tooltip will appear explaining the option
 
-###### -NPCs
-    Randomizes the models and sizes of all NPCs. Also randomizes which enemy the Dark & Darker Lord 
-    are in cutscenes.
+#### CLI
+```
+usage: MiitopiaRandomizer_cli [-h] [--battles] [--jobs] [--treasure] [--npcs] [--seed SEED]
 
-The fight against the Mini Slime as well as the first area afterwards are not
-randomized in order to avoid softlocking. Randomization of enemies/stages begins
-in the first area unlocked after getting Inn access.
+Miitopia Randomizer
 
-# Instructions
-1. Create the following folders in this order if it does not already exist: `Output/romfs/cmn/param/stage`
-2. Place the following files from your Miitopia romfs dump into `Output/romfs/cmn/param`: `enemy.sarc, job.sarc, npc.sarc`
-3. Place the following files from your Miitopia romfs dump into `Output/romfs/cmn/param/stage`: `Treasure.sarc, World01 - World06.sarc files`
-4. Run `main.py`
-5. Enter your desired Randomization options
-6. Move the `romfs` folder from Output to the location of your mods and say "yes" to replace all if prompted
+options:
+  -h, --help            show this help message and exit
+  --battles, -B         Randomizes every battle in every stage (except for the first 2).
+                        Music, background (if possible) and enemies are randomized.
+                        Enemies are randomized based on their strength: 
+                        As an example, Rock Moths can be replaced with similarly weak enemies such as a Pom or Mouthy Tomato.
+  --jobs, -J            Randomizes the world in which Jobs are unlocked. Also randomizes the look of what weapon a Job uses.
+  --treasure, -T        Randomizes the contents of all Treasure Chests.
+  --npcs, -N            Randomizes the NPCs models, as well as what enemy the Dark Lord is.
+  --seed SEED, -S SEED  Specifies a seed to use for the randomization.
+                        Useful if you want to play the same game with/against someone else
+```
 
-### No Such File or Directory error
-1. Open command prompt
-2. `cd file path for where you extracted the randomizer`
-3. Example would be `cd C:/Users/Username/Downloads/Miitopia_Randomizer`
-4. `python main.py`
-5. Go to step 5 of Instructions.
+
+### Note
+The fight against the Mini Slime as well as the first area afterwards are notrandomized in order to avoid softlocking.  
+Randomization of enemies/stages begins in the first area unlocked after getting Inn access.
+
+
+### Instructions
+1. Copy your 'cmn' folder from your romfs into Input/romfs/
+2. Run the GUI or the CLI
+3. Select the options you want
+4. Copy the 'romfs' folder from the output directory into your mod location and overwrite all files if prompted
+
 
 ### Mod Location/Folder
 - For Atmosphere cfw users, this is `atmosphere/contents/01003DA010E8A000/` Place the romfs folder here

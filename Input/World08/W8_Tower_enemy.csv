@@ -1,8 +1,0 @@
-Boss0,Boss0,Minotaur3,,,,,,,,W7_DefeatTower8Kings_1,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_BIGBOSS,,"FlowchartDemo,PreBossKingSeries_01","FlowchartDemo,LoseBossKingSeries_00",495
-Boss1,Boss1,Robot4,Monitor3,Robot4,,,,,,W7_DefeatTower8Kings_2,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_BIGBOSS,,"FlowchartDemo,PreBossKingSeries_02","FlowchartDemo,LoseBossKingSeries_01",496
-Boss2,Boss2,Frog4,Frog3,,,,,,,W7_DefeatTower8Kings_3,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_BIGBOSS,,"FlowchartDemo,PreBossKingSeries_03","FlowchartDemo,LoseBossKingSeries_02",497
-Boss3,Boss3,Dragon3,,,,,,,,W7_DefeatTower8Kings_4,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_BIGBOSS,,"FlowchartDemo,PreBossKingSeries_04","FlowchartDemo,LoseBossKingSeries_03",498
-Boss4,Boss4,Cerberus3,,,,,,,,W7_DefeatTower8Kings_5,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_BIGBOSS,,"FlowchartDemo,PreBossKingSeries_05","FlowchartDemo,LoseBossKingSeries_04",499
-Boss5,Boss5,IceQueen3,Satan2,,,,,,,W7_DefeatTower8Kings_6,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_SATAN,,"FlowchartDemo,PreBossKingSeries_06","FlowchartDemo,LoseBossKingSeries_05",500
-Boss6,Boss6,SuperSatan0,,,,,,,,W7_DefeatTower8Kings_7,,"IsBoss,IsNotEscape",,BGM_BATTLE_BOSS_BLACK_SAGE,,"FlowchartDemo,PreBossKingSeries_07","FlowchartDemo,LoseBossKingSeries_06",501
-Boss7,Boss7,SuperSatanBit1,SuperSatanCenter1,SuperSatanBit1,,,,,,W7_DefeatAllTowerBoss,,"IsBoss,IsNotEscape",Space02,BGM_BATTLE_BOSS_SUPER_SATAN_BODY,,InnForward,"FlowchartDemo,LoseBossKingSeries_07",502
