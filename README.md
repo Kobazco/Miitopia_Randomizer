@@ -5,6 +5,7 @@
 - A modded switch/3DS or emulator (Ryujinx is suggested due to Mii Maker support, Citra for 3DS)
 - A Miitopia romfs dump (We cannot legally provide this)
 - Knowledge of how to install mods on cfw or your emulator of choice
+- Python 3.10 or above
 
 
 ### Options
@@ -39,9 +40,10 @@ Randomization of enemies/stages begins in the first area unlocked after getting 
 
 ### Instructions
 1. Copy your 'cmn' folder from your romfs into Input/romfs/
-2. Run the GUI or the CLI
-3. Select the options you want
-4. Copy the 'romfs' folder from the output directory into your mod location and overwrite all files if prompted
+2. Run package_release.bat or package_release.sh
+3. Run the GUI or the CLI in the newly created Release folder
+4. Select the options you want
+5. Copy the 'romfs' folder from the output directory into your mod location and overwrite all files if prompted
 
 
 ### Mod Location/Folder
