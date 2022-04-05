@@ -20,6 +20,10 @@ Randomization of enemies/stages begins in the first area unlocked after getting 
 ### Options
 
 #### GUI
+<details>
+  <summary>Preview image</summary>
+  <img src="https://user-images.githubusercontent.com/34034631/161847591-fc27d62e-17ff-4913-a7bc-efa2658dabe2.png">
+</details>
 When hovering over an option in the GUI, a tooltip will appear explaining the option
 
 #### CLI
