@@ -14,6 +14,11 @@ from MiitopiaRandomizer.const import base_input_dir, base_output_dir
 logger = logging.getLogger('Util')
 
 
+def get_csv_rows_from_file(file_path: str) -> list[list[str]]:
+    with open(file_path, newline='') as f:
+        return [*csv.reader(f)]
+
+
 def get_csv_rows_from_sarc(sarc_or_filename: sarc.SARC | str, file_in_sarc: str) -> list[list[str]]:
     if isinstance(sarc_or_filename, sarc.SARC):
         sarc_reader = sarc_or_filename
