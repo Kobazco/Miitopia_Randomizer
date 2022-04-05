@@ -40,10 +40,11 @@ Randomization of enemies/stages begins in the first area unlocked after getting 
 
 ### Instructions
 1. Copy your 'cmn' folder from your romfs into Input/romfs/
-2. Run package_release.bat or package_release.sh
-3. Run the GUI or the CLI in the newly created Release folder
-4. Select the options you want
-5. Copy the 'romfs' folder from the output directory into your mod location and overwrite all files if prompted
+2. As a temporary bug fix, please use [this](https://drive.google.com/file/d/1RqisLxdneC9mJZLLoWS9gk9-Zi41ZRpu/view?usp=sharing) pre-edited enemy.sarc and place it in Input/romfs/cmn/param and select "yes" to replace when prompted.
+3. Run package_release.bat or package_release.sh
+4. Run the GUI or the CLI in the newly created Release folder
+5. Select the options you want
+6. Copy the 'romfs' folder from the output directory into your mod location and overwrite all files if prompted
 
 
 ### Mod Location/Folder

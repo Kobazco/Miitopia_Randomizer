@@ -231,8 +231,8 @@ def randomize_npcs():
         randomized_row[7] = random.choice(all_npc_models)
         # These were originally 10 and 11, but looking at the file,
         # that seems to have been a mistake (lists start at 0 :)
-        randomized_row[9] = random.randint(10, 130)
         randomized_row[10] = random.randint(10, 130)
+        randomized_row[11] = random.randint(10, 130)
         csv_writer.writerow(randomized_row)
     copy_input_to_output('npc.sarc')
     sarc_writer = get_writer_from_output_sarc('npc.sarc')
@@ -269,6 +269,6 @@ def randomize_dl():
     sarc_writer = get_writer_from_output_sarc('enemy.sarc')
     randomized_data.seek(0)
     sarc_writer.add_file('enemyInfo.csv', randomized_data.read().encode())
-    write_sarc_to_output(sarc_writer, 'npc.sarc')
+    write_sarc_to_output(sarc_writer, 'enemy.sarc')
 
     logger.info('Randomized Dark Lord Enemy Model')
