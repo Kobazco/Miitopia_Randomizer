@@ -40,7 +40,8 @@ def randomize_battles(is_switch: bool, randomize_music=True, randomize_backgroun
     for bgm_data in get_csv_rows_from_input_sarc('sound.sarc', 'BgmList.csv'):
         # Don't add Jingles (starting with JGL)
         if bgm_data[0].startswith('BGM'):
-            backgroundmusic.append(bgm_data[0])
+            if not bgm_data[0].startswith('BGM_MAPINTRO'):
+                backgroundmusic.append(bgm_data[0])
 
     world_files_to_randomize = [os.path.join('stage', f'World{i:02}.sarc') for i in range(1, world_limit+1)]
 
