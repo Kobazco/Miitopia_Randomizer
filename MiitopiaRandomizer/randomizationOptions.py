@@ -9,7 +9,7 @@ import sarc
 from MiitopiaRandomizer.const import battle_files_to_randomize, world_limit, base_output_dir, required_files
 from MiitopiaRandomizer.util import verify_input_files, copy_input_to_output, read_input_sarc, \
     get_csv_rows_from_input_sarc, randomize_csv_rows, get_writer_from_output_sarc, write_sarc_to_output, \
-    get_data_file_path
+    get_data_file_path, get_csv_rows_from_file
 
 
 def randomize_battles(is_switch: bool, randomize_music=True, randomize_backgrounds=True):
@@ -27,8 +27,10 @@ def randomize_battles(is_switch: bool, randomize_music=True, randomize_backgroun
             with open(face_config_file_path, 'rb') as src:
                 writer.add_file('enemyFaceConfig.csv', src.read())
 
+    # We have to use a custom enemyStatus.csv here since the original has a lot of levels set weirdly
+    enemy_status_path = get_data_file_path('enemyStatus.csv')
     enemies: list[tuple[str, int]] = []
-    for enemy_data in get_csv_rows_from_input_sarc('enemy.sarc', 'enemyStatus.csv'):
+    for enemy_data in get_csv_rows_from_file(enemy_status_path):
         enemies.append((enemy_data[0], int(enemy_data[7])))
 
     backgrounds: list[str] = []
