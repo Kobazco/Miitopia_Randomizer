@@ -5,7 +5,6 @@
 - A modded switch/3DS or emulator (Ryujinx is suggested due to Mii Maker support, Citra for 3DS)
 - A Miitopia romfs dump (We cannot legally provide this)
 - Knowledge of how to install mods on cfw or your emulator of choice
-- Python 3.10 or above
 
 
 ### Options
