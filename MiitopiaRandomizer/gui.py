@@ -151,10 +151,11 @@ def do_randomization(randomize_battles: bool, randomize_battle_music: bool, rand
 
     clear_output_dir()
 
+    is_switch = get_file_version() == 'Switch'
     if randomize_battles:
         if not randomization_wrapper(
                 'battles', randomizationOptions.randomize_battles,
-                [get_file_version() == 'Switch', randomize_battle_music, randomize_battle_backgrounds]):
+                [is_switch, randomize_battle_music, randomize_battle_backgrounds]):
             return
     if randomize_job_worlds or randomize_job_weapons:
         if not randomization_wrapper(
@@ -167,7 +168,8 @@ def do_randomization(randomize_battles: bool, randomize_battle_music: bool, rand
             return
     if randomize_npcs:
         if not randomization_wrapper(
-                'npcs', randomizationOptions.randomize_npcs):
+                'npcs', randomizationOptions.randomize_npcs,
+                [is_switch]):
             return
     if randomize_dl:
         if not randomization_wrapper(

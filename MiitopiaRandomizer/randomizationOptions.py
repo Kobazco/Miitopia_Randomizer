@@ -214,7 +214,7 @@ def randomize_treasure():
     logger.info('Treasures randomized')
 
 
-def randomize_npcs():
+def randomize_npcs(is_switch: bool):
     verify_input_files(required_files['npcs'])
 
     logger = logging.getLogger('NpcRandomizer')
@@ -232,10 +232,13 @@ def randomize_npcs():
     for row in npc_data:
         randomized_row = row.copy()
         randomized_row[7] = random.choice(all_npc_models)
-        # These were originally 10 and 11, but looking at the file,
-        # that seems to have been a mistake (lists start at 0 :)
-        randomized_row[10] = random.randint(10, 130)
-        randomized_row[11] = random.randint(10, 130)
+        # The switch version of the files have an extra column with the default Mii
+        if is_switch:
+            randomized_row[10] = random.randint(10, 130)
+            randomized_row[11] = random.randint(10, 130)
+        else:
+            randomized_row[9] = random.randint(10, 130)
+            randomized_row[10] = random.randint(10, 130)
         csv_writer.writerow(randomized_row)
     copy_input_to_output('npc.sarc')
     sarc_writer = get_writer_from_output_sarc('npc.sarc')

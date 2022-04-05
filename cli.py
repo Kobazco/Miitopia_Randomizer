@@ -80,15 +80,15 @@ def main():
         f.write(str(seed))
 
     # Do the actual work
+    is_switch = get_file_version() == 'Switch'
     if args.battles:
-        is_switch = get_file_version() == 'Switch'
         randomizationOptions.randomize_battles(is_switch)
     if args.jobs:
         randomizationOptions.randomize_jobs()
     if args.treasure:
         randomizationOptions.randomize_treasure()
     if args.npcs:
-        randomizationOptions.randomize_npcs()
+        randomizationOptions.randomize_npcs(is_switch)
         randomizationOptions.randomize_dl()
 
 
