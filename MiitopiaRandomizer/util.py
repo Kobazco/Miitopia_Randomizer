@@ -93,6 +93,9 @@ def verify_input_files(file_list: list[str], exit_when_missing=True) -> tuple[bo
 
 
 def copy_input_to_output(file_path: str):
+    # Don't overwrite the file if it already exists
+    if os.path.exists(os.path.join(base_output_dir, file_path)):
+        return
     os.makedirs(os.path.join(base_output_dir, os.path.dirname(file_path)), exist_ok=True)
     shutil.copyfile(os.path.join(base_input_dir, file_path), os.path.join(base_output_dir, file_path))
 
