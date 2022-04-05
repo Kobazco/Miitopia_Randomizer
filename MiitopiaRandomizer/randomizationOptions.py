@@ -26,6 +26,7 @@ def randomize_battles(is_switch: bool, randomize_music=True, randomize_backgroun
             face_config_file_path = get_data_file_path('enemyFaceConfig.csv')
             with open(face_config_file_path, 'rb') as src:
                 writer.add_file('enemyFaceConfig.csv', src.read())
+            write_sarc_to_output(writer, 'enemy.sarc')
 
     # We have to use a custom enemyStatus.csv here since the original has a lot of levels set weirdly
     enemy_status_path = get_data_file_path('enemyStatus.csv')
