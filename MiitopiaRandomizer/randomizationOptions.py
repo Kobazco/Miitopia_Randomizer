@@ -141,7 +141,6 @@ def randomize_jobs(hidden_job_logic=True, randomize_worlds=True, randomize_weapo
         for row in source_rows:
             if row[1] == '0':
                 row[1] = str(worlds_hidden_jobs_unlock_in.pop())
-            row[2] = ''
 
     # 1 -> World the job unlocks in
     # 4 -> Job weapon
