@@ -34,6 +34,12 @@ def randomize_battles(is_switch: bool, randomize_music=True, randomize_backgroun
     for enemy_data in get_csv_rows_from_file(enemy_status_path):
         enemies.append((enemy_data[0], int(enemy_data[7])))
 
+    # To assign boss faces properly, we need a list of all bosses and their faces
+    boss_to_face_dict: dict[str, str] = {}
+    for book_data in get_csv_rows_from_input_sarc('book.sarc', 'enemyBookInfo.csv'):
+        if book_data[5]:
+            boss_to_face_dict[book_data[0]] = book_data[5]
+
     backgrounds: list[str] = []
     for bg_data in get_csv_rows_from_input_sarc('bg.sarc', 'BGData.csv'):
         if bg_data[1]:
@@ -111,6 +117,10 @@ def randomize_battles(is_switch: bool, randomize_music=True, randomize_backgroun
                     # Get all enemies with this new level
                     new_enemies = [enemy[0] for enemy in enemies if enemy[1] == random_level]
                     new_enemy = random.choice(new_enemies)
+                    # If the new enemy is a boss with a set face, add its face
+                    if new_enemy in boss_to_face_dict:
+                        face_to_add = boss_to_face_dict[new_enemy]
+                        new_enemy += f',{face_to_add}'
                     # Store this new random enemy
                     randomized_row[enemy_index] = new_enemy
                 # Once all the enemies are randomized, we can write the row

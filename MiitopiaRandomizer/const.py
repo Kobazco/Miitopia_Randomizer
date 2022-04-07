@@ -91,7 +91,7 @@ else:
 
 required_files: dict[str, list[str]] = {
     'battles': [
-        'bg.sarc', 'enemy.sarc', 'sound.sarc',
+        'bg.sarc', 'enemy.sarc', 'sound.sarc', 'book.sarc',
         *[join('stage', f'World{i:02}.sarc') for i in range(1, world_limit+1)]
     ],
     'jobs': ['job.sarc'],
