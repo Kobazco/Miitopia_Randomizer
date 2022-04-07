@@ -1,0 +1,57 @@
+name: Package GUI & CLI
+
+on: [push, fork, workflow_dispatch]
+
+jobs:
+  build-win:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Setup Python
+        uses: actions/setup-python@master
+        with:
+          python-version: "3.10"
+      - name: Install required packages
+        run: pip install -r requirements.txt pyinstaller
+      - name: Package GUI
+        run: pyinstaller -F gui.spec
+      - name: Package CLI
+        run: pyinstaller -F cli.spec
+      - name: Copy Executables
+        run: xcopy dist .
+      - name: Upload Release
+        uses: actions/upload-artifact@master
+        with:
+          name: release-win
+          path: |
+            Input
+            MiitopiaRandomizer.exe
+            MiitopiaRandomizer_cli.exe
+  build-linux:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@master
+      - name: Setup Python
+        uses: actions/setup-python@master
+        with:
+          python-version: "3.10"
+      - name: Install required packages
+        run: pip install -r requirements.txt pyinstaller
+      - name: Package GUI
+        run: pyinstaller -F gui.spec
+      - name: Package CLI
+        run: pyinstaller -F cli.spec
+      - name: Copy Executables
+        run: |
+          rm -r MiitopiaRandomizer
+          cp dist/* .
+      - name: Upload Release
+        uses: actions/upload-artifact@master
+        with:
+          name: release-linux
+          path: |
+            Input
+            MiitopiaRandomizer
+            MiitopiaRandomizer_cli
