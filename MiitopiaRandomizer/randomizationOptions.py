@@ -6,7 +6,8 @@ from io import StringIO
 
 import sarc
 
-from MiitopiaRandomizer.const import battle_files_to_randomize, world_limit, base_output_dir, required_files
+from MiitopiaRandomizer.const import battle_files_to_randomize, world_limit, base_output_dir, required_files, \
+    enemy_limit_switch, enemy_limit_3ds
 from MiitopiaRandomizer.util import verify_input_files, copy_input_to_output, read_input_sarc, \
     get_csv_rows_from_input_sarc, randomize_csv_rows, get_writer_from_output_sarc, write_sarc_to_output, \
     get_data_file_path, get_csv_rows_from_file
@@ -93,7 +94,7 @@ def randomize_battles(is_switch: bool, randomize_music=True, randomize_backgroun
                 if randomize_music:
                     randomized_row[14] = random.choice(backgroundmusic)
 
-                for enemy_index in range(2, 7):
+                for enemy_index in range(2, 2 + (enemy_limit_switch if is_switch else enemy_limit_3ds)):
                     enemy_name = row[enemy_index]
                     # If we have no enemies anymore, we're done
                     # NOTE: This could be used to add/remove a random amount of enemies in the future
@@ -123,6 +124,9 @@ def randomize_battles(is_switch: bool, randomize_music=True, randomize_backgroun
                         new_enemy += f',{face_to_add}'
                     # Store this new random enemy
                     randomized_row[enemy_index] = new_enemy
+                # Clear out remaining enemy cells
+                for j in range(enemy_index+1, 11):
+                    randomized_row[j] = ''
                 # Once all the enemies are randomized, we can write the row
                 csv_writer.writerow(randomized_row)
             # Since we wrote to the StringIO and now want to read it back out,

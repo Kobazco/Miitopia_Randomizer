@@ -6,6 +6,11 @@ max_seed_value = 2147483647
 # The original stageEnemy.py didn't randomize world 7 and 8, so we won't either
 world_limit = 6
 
+# Limit of enemies to randomize
+# Note that this is the limit, it does not set the amount of enemies
+enemy_limit_switch = 8
+enemy_limit_3ds = 4
+
 # It still isn't nice to just put a big list into here, but it's better than having the actual files IMO
 # Note that this is 0-indexed, so world_files_to_randomize[0] gives you the data for world 1
 battle_files_to_randomize: list[list[str]] = [
