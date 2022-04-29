@@ -15,9 +15,9 @@ jobs:
       - name: Install required packages
         run: pip install -r requirements.txt pyinstaller
       - name: Package GUI
-        run: pyinstaller -F gui.spec
+        run: pyinstaller gui.spec
       - name: Package CLI
-        run: pyinstaller -F cli.spec
+        run: pyinstaller cli.spec
       - name: Copy Executables
         run: xcopy dist .
       - name: Upload Release
@@ -40,9 +40,9 @@ jobs:
       - name: Install required packages
         run: pip install -r requirements.txt pyinstaller
       - name: Package GUI
-        run: pyinstaller -F gui.spec
+        run: pyinstaller gui.spec
       - name: Package CLI
-        run: pyinstaller -F cli.spec
+        run: pyinstaller cli.spec
       - name: Copy Executables
         run: |
           rm -r MiitopiaRandomizer
