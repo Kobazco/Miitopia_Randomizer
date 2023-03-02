@@ -125,7 +125,7 @@ def randomize_battles(is_switch: bool, randomize_music=True, randomize_backgroun
                     # Store this new random enemy
                     randomized_row[enemy_index] = new_enemy
                 # Clear out remaining enemy cells
-                for j in range(enemy_index+1, 11):
+                for j in range(enemy_index+1, 9):
                     randomized_row[j] = ''
                 # Once all the enemies are randomized, we can write the row
                 csv_writer.writerow(randomized_row)
