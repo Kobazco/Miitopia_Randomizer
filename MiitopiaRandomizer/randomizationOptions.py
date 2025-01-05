@@ -203,6 +203,11 @@ def randomize_treasure():
     for row in get_csv_rows_from_input_sarc(treasure_sarc_path, 'TreasureBox.csv'):
         # Do not randomize key items
         if row[1] == 'KeyItem':
+            csv_writer.writerow(row)
+            continue
+        # Also do not randomize random dungeon chests
+        if row[2] == 'Random':
+            csv_writer.writerow(row)
             continue
         content = row[1] = random.choice(possible_chest_contents)
         if content == 'Money':
