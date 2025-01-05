@@ -102,5 +102,6 @@ required_files: dict[str, list[str]] = {
     'jobs': ['job.sarc'],
     'treasure': ['dish.sarc', join('stage', 'Treasure.sarc')],
     'npcs': ['npc.sarc'],
-    'dark_lord': ['enemy.sarc']
+    'dark_lord': ['enemy.sarc'],
+    'grub': ['dish.sarc']
 }

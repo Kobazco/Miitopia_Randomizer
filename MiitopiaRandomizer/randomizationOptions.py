@@ -297,3 +297,133 @@ def randomize_dl():
     write_sarc_to_output(sarc_writer, 'enemy.sarc')
 
     logger.info('Randomized Dark Lord Enemy Model')
+
+def randomize_grub():
+    verify_input_files(required_files['grub'])
+
+    logger = logging.getLogger('GrubRandomizer')
+    logger.info('Randomizing Grub...')
+
+    possible_grub_stats = [
+        'HP', 'ATK', 'MP', 'MAG', 'SPD', 'DEF'
+    ]
+    grub_exp = [
+        13, 25, 40
+    ]
+    fullness = [
+        25, 50, 80
+    ]
+    tastiness = [
+        1, 2, 3, 4, 5
+    ]
+    grub_sound_effect = [
+        'Soft', 'Meat', 'Drink', 'Hard', 'Fresh', 'Noodles'
+    ]
+    randomized_data = StringIO()
+    csv_writer = csv.writer(randomized_data)
+
+    source_rows = get_csv_rows_from_input_sarc('dish.sarc', 'Dish.csv')
+    for row in source_rows:
+        # Clear all base grub stats
+        for j in range(2, 13):
+            row[j] = ''
+        # Do randomization for all base stuff
+        row[2] = random.choice(possible_grub_stats)
+        row[3] = random.choice(grub_exp)
+        row[14] = random.choice(tastiness)
+        row[15] = random.choice(fullness)
+        row[17] = random.choice(grub_sound_effect)
+        match row[16]:
+            case 'Normal':
+                logger.info('Normal Rarity')
+                # Num between 0 and 1, do an extra row of states if 1
+                if random.randint(0, 1) == 1:
+                    logger.info('Adding extra stat to Normal Rarity Grub...')
+                    row[4] = random.choice(possible_grub_stats)
+                    row[5] = random.choice(grub_exp)
+            case 'Rare':
+                randGrub = random.randint(0, 3)
+                logger.info('Rare Rarity')
+                if randGrub == 1:
+                    logger.info('Adding extra stat to Rare Rarity Grub...')
+                    row[4] = random.choice(possible_grub_stats)
+                    row[5] = random.choice(grub_exp)
+                elif randGrub == 2:
+                    logger.info('Adding 2 extra stats to Rare Rarity Grub...')
+                    row[4] = random.choice(possible_grub_stats)
+                    row[5] = random.choice(grub_exp)
+                    row[6] = random.choice(possible_grub_stats)
+                    row[7] = random.choice(grub_exp)
+                elif randGrub == 3:
+                    logger.info('Adding 3 extra stats to Rare Rarity Grub...')
+                    i = 4
+                    for i in range (i, 8):
+                        if i != 4:
+                            i += 1 # Must be every other row
+                        row[i] = random.choice(possible_grub_stats)
+                    e = 5 
+                    for e in range (e, 9):
+                        if e == 6 or e == 8:
+                            e +=1
+                        row[e] = random.choice(grub_exp)
+            case 'SuperRare':
+                randGrub = random.randint(0, 5)
+                logger.info('SuperRare Rarity')
+                if randGrub == 1:
+                    logger.info('Adding extra stat to SuperRare Rarity Grub...')
+                    row[4] = random.choice(possible_grub_stats)
+                    row[5] = random.choice(grub_exp)
+                elif randGrub == 2:
+                    logger.info('Adding 2 extra stats to SuperRare Rarity Grub...')
+                    row[4] = random.choice(possible_grub_stats)
+                    row[5] = random.choice(grub_exp)
+                    row[6] = random.choice(possible_grub_stats)
+                    row[7] = random.choice(grub_exp)
+                elif randGrub == 3:
+                    logger.info('Adding 3 extra stats to Rare Rarity Grub...')
+                    i = 4
+                    for i in range (i, 8):
+                        if i != 4:
+                            i += 1 # Must be every other row
+                        row[i] = random.choice(possible_grub_stats)
+                    e = 5 
+                    for e in range (e, 9):
+                        if e == 6 or e == 8:
+                            e +=1
+                        row[e] = random.choice(grub_exp)
+                elif randGrub == 4:
+                    logger.info('Adding 4 extra stats to Rare Rarity Grub...')
+                    i = 4
+                    for i in range (i, 10):
+                        if i != 4:
+                            i += 1 # Must be every other row
+                        row[i] = random.choice(possible_grub_stats)
+                    e = 5 
+                    for e in range (e, 11):
+                        if e == 6 or e == 8 or e == 10:
+                            e +=1
+                        row[e] = random.choice(grub_exp)
+                elif randGrub == 5:
+                    logger.info('Adding 5 extra stats to SuperRare Rarity Grub...')
+                    i = 4
+                    for i in range (i, 12):
+                        if i != 4:
+                            i += 1 # Must be every other row
+                        row[i] = random.choice(possible_grub_stats)
+                    e = 5 
+                    for e in range (e, 13):
+                        if e == 6 or e == 8 or e == 10 or e == 12:
+                            e +=1
+                        row[e] = random.choice(grub_exp)
+            #case _:
+                #logger.info('Meow')
+
+        csv_writer.writerow(row)
+
+    copy_input_to_output('dish.sarc')
+    sarc_writer = get_writer_from_output_sarc('dish.sarc')
+    randomized_data.seek(0)
+    sarc_writer.add_file('Dish.csv', randomized_data.read().encode())
+    write_sarc_to_output(sarc_writer, 'dish.sarc')
+
+    logger.info('Randomized Grub')

@@ -12,10 +12,13 @@ from MiitopiaRandomizer.util import clear_output_dir, get_file_version
 # TODO: List of planned features:
 #  - Enemy Skills
 #  - Grub Bonuses
-#  - New Enemies for greater variety
+#  - Randomly Create New Enemies
 #  - Enemy Faces
 #  - NPC Clothes Colors
 #  - Include Job outfits in NPC Model Randomization
+#  - Clothes Colors
+#  - Job Skills
+#  - Apply Random Dark Lord to Battles
 
 
 def main():
@@ -51,6 +54,12 @@ def main():
         action='store',
         help='Specifies a seed to use for the randomization.\n' +
              'Useful if you want to play the same game with/against someone else'
+    )
+    parser.add_argument(
+        '--grub', '-G',
+        action='store_true',
+        help='Randomizes the stats that Grub give on consumption,\n' +
+             'as well as its sound effect and tastiness'
     )
     args = parser.parse_args()
 
@@ -90,6 +99,8 @@ def main():
     if args.npcs:
         randomizationOptions.randomize_npcs(is_switch)
         randomizationOptions.randomize_dl()
+    if args.grub:
+        randomizationOptions.randomize_grub()
 
 
 if __name__ == '__main__':
