@@ -125,7 +125,7 @@ def randomize_battles(is_switch: bool, randomize_music=True, randomize_backgroun
                     # Store this new random enemy
                     randomized_row[enemy_index] = new_enemy
                 # Clear out remaining enemy cells
-                for j in range(enemy_index+1, 9):
+                for j in range(enemy_index+1, 10):
                     randomized_row[j] = ''
                 # Once all the enemies are randomized, we can write the row
                 csv_writer.writerow(randomized_row)
@@ -202,7 +202,7 @@ def randomize_treasure():
     treasure_sarc_path = os.path.join('stage', 'Treasure.sarc')
     for row in get_csv_rows_from_input_sarc(treasure_sarc_path, 'TreasureBox.csv'):
         # Do not randomize key items
-        if row == 'KeyItem':
+        if row[1] == 'KeyItem':
             continue
         content = row[1] = random.choice(possible_chest_contents)
         if content == 'Money':

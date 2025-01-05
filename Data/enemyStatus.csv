@@ -1,4 +1,3 @@
-Goblin0_Dish,8,0,8,6,0,6,1,8,2,Goblin00,100,Goblin01,0,Goblin02,0
 Mimit4,16,0,22,10,0,13,6,30,22,Mimit00,0,Mimit01,0,Mimit02,0
 Slime0,7,0,7,6,0,6,1,0,9,Slime00,100,Slime01,0,Slime02,0
 Butterfly0,7,0,7,5,0,6,1,5,2,Butterfly00,45,Butterfly01,5,Butterfly02,0
@@ -64,7 +63,6 @@ Gremlin0,55,0,43,16,12,20,7,110,36,Gremlin00,45,Gremlin01,5,Gremlin02,0
 Banshee2,40,0,35,15,0,26,7,160,32,Banshee00,22,Banshee01,20,Banshee02,3
 EatPlant2,50,0,38,10,0,13,7,140,34,EatPlant00,30,EatPlant01,20,EatPlant02,5
 Owl0,360,0,42,16,0,13,12,0,150,Owl00,0,Owl01,80,Owl02,20
-Tomato0,350,0,40,20,20,16,12,0,250,Tomato00,0,Tomato01,80,Tomato02,20
 Butterfly2,400,0,45,16,18,9,10,0,250,Butterfly00,0,Butterfly01,0,Butterfly02,100
 Slime6,450,0,43,19,0,15,10,0,300,Slime00,0,Slime01,0,Slime02,100
 Fluff0,43,0,36,15,0,16,7,96,48,Fluff00,45,Fluff01,5,Fluff02,0
@@ -88,7 +86,6 @@ Cerberus0,1200,0,76,32,20,32,16,0,700,Cerberus00,0,Cerberus01,0,Cerberus02,100
 Cloud2,600,0,60,25,21,22,14,0,500,Cloud00,0,Cloud01,0,Cloud02,100
 Demon0,650,0,75,30,0,26,14,0,900,Demon00,0,Demon01,0,Demon02,100
 Dragon0,1300,0,66,30,20,28,17,0,1200,Dragon00,0,Dragon01,45,Dragon02,0
-Dragon0Demo0,320,0,66,25,14,28,13,0,1200,Dragon00,0,Dragon01,0,Dragon02,0
 Golem4,500,0,66,28,13,15,12,0,600,Golem00,0,Golem01,80,Golem02,20
 Minotaur1,220,0,65,33,24,33,14,0,320,Minotaur00,45,Minotaur01,5,Minotaur02,0
 Painting4,700,0,58,28,14,20,12,0,900,Painting00,0,Painting01,80,Painting02,20
@@ -97,7 +94,6 @@ Shield1,220,0,45,50,0,12,10,0,350,Shield00,0,Shield01,0,Shield02,100
 Sword1,150,0,70,20,0,12,10,0,350,Sword00,0,Sword01,0,Sword02,100
 Devil1,120,0,65,22,0,15,11,140,180,Devil00,45,Devil01,5,Devil02,0
 Mimit1,5,0,90,10000,10000,100,10,0,2000,Mimit00,0,Mimit01,0,Mimit02,0
-Devil5,80,0,75,30,0,15,9,0,220,Devil00,45,Devil01,5,Devil02,0
 Butterfly6,22,0,40,18,0,30,6,200,32,Butterfly00,15,Butterfly01,1,Butterfly02,0
 Bread1,85,0,70,20,0,24,10,280,380,Bread00,45,Bread01,5,Bread02,0
 Mimit3,15,0,150,10000,10000,100,15,0,20000,Mimit00,0,Mimit01,0,Mimit02,0
