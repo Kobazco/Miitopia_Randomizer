@@ -333,6 +333,9 @@ def randomize_grub():
         row[14] = random.choice(tastiness)
         row[15] = random.choice(fullness)
         row[17] = random.choice(grub_sound_effect)
+        # As always, my code is messy lol
+        # TODO: Make it so it doesn't add
+        # duplicate stats (like 2 ATK entries, etc)
         match row[16]:
             case 'Normal':
                 logger.info('Normal Rarity')
@@ -342,18 +345,22 @@ def randomize_grub():
                     row[4] = random.choice(possible_grub_stats)
                     row[5] = random.choice(grub_exp)
             case 'Rare':
+                # Rare Rarity Grub
                 randGrub = random.randint(0, 3)
                 logger.info('Rare Rarity')
+                # Add 1 extra stat
                 if randGrub == 1:
                     logger.info('Adding extra stat to Rare Rarity Grub...')
                     row[4] = random.choice(possible_grub_stats)
                     row[5] = random.choice(grub_exp)
+                # Add 2 extra Stats
                 elif randGrub == 2:
                     logger.info('Adding 2 extra stats to Rare Rarity Grub...')
                     row[4] = random.choice(possible_grub_stats)
                     row[5] = random.choice(grub_exp)
                     row[6] = random.choice(possible_grub_stats)
                     row[7] = random.choice(grub_exp)
+                # Add 3 extra stats
                 elif randGrub == 3:
                     logger.info('Adding 3 extra stats to Rare Rarity Grub...')
                     i = 4
@@ -366,19 +373,23 @@ def randomize_grub():
                         if e == 6 or e == 8:
                             e +=1
                         row[e] = random.choice(grub_exp)
+            # Super Rare Grub
             case 'SuperRare':
                 randGrub = random.randint(0, 5)
                 logger.info('SuperRare Rarity')
+                # Add 1 extra stat
                 if randGrub == 1:
                     logger.info('Adding extra stat to SuperRare Rarity Grub...')
                     row[4] = random.choice(possible_grub_stats)
                     row[5] = random.choice(grub_exp)
+                # Add 2 extra stats
                 elif randGrub == 2:
                     logger.info('Adding 2 extra stats to SuperRare Rarity Grub...')
                     row[4] = random.choice(possible_grub_stats)
                     row[5] = random.choice(grub_exp)
                     row[6] = random.choice(possible_grub_stats)
                     row[7] = random.choice(grub_exp)
+                # add 3 extra stats
                 elif randGrub == 3:
                     logger.info('Adding 3 extra stats to Rare Rarity Grub...')
                     i = 4
@@ -391,6 +402,7 @@ def randomize_grub():
                         if e == 6 or e == 8:
                             e +=1
                         row[e] = random.choice(grub_exp)
+                # add 4 extra stats
                 elif randGrub == 4:
                     logger.info('Adding 4 extra stats to Rare Rarity Grub...')
                     i = 4
@@ -403,6 +415,7 @@ def randomize_grub():
                         if e == 6 or e == 8 or e == 10:
                             e +=1
                         row[e] = random.choice(grub_exp)
+                # add 5 extra stats
                 elif randGrub == 5:
                     logger.info('Adding 5 extra stats to SuperRare Rarity Grub...')
                     i = 4

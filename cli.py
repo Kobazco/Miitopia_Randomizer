@@ -11,7 +11,7 @@ from MiitopiaRandomizer.util import clear_output_dir, get_file_version
 
 # TODO: List of planned features:
 #  - Enemy Skills
-#  - Grub Bonuses
+#  - Grub Bonuses - basic done
 #  - Randomly Create New Enemies
 #  - Enemy Faces
 #  - NPC Clothes Colors
