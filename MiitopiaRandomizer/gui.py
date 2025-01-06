@@ -104,6 +104,25 @@ class MainWindow(QMainWindow):
         randomize_dl_enemy = QCheckBox('Randomize Dark Lord enemy model', main_widget)
         layout.addWidget(randomize_dl_enemy)
 
+        layout.addWidget(HorizontalLine(main_widget))
+
+        # Misc options
+        # Grub randomization
+        randomize_grub = QCheckBox('Randomize Grub', main_widget)
+        randomize_grub.setToolTip(
+            'Randomizes what stats grub give when\n'
+            'consumed by Miis. Also randomizes how full\n'
+            'the food makes a Mii.'
+        )
+        layout.addWidget(randomize_grub)
+
+        # Equipment Colors randomization
+        randomize_colors = QCheckBox('Randomize Equipemnt Colors', main_widget)
+        randomize_colors.setToolTip(
+            'Randomizes the colors that armors/clothes have.'
+        )
+        layout.addWidget(randomize_colors)
+
         layout.addStretch()
 
         bottom_layout = QHBoxLayout(layout.widget())
@@ -118,7 +137,8 @@ class MainWindow(QMainWindow):
         do_randomization_button.pressed.connect(lambda: do_randomization(
             randomize_battles.isChecked(), randomize_battle_music.isChecked(), randomize_battle_backgrounds.isChecked(),
             randomize_job_worlds.isChecked(), randomize_job_weapons.isChecked(), job_randomization_logic.isChecked(),
-            randomize_treasure.isChecked(), randomize_npcs.isChecked(), randomize_dl_enemy.isChecked(),
+            randomize_treasure.isChecked(), randomize_npcs.isChecked(), randomize_dl_enemy.isChecked(), randomize_grub.isChecked(),
+            randomize_colors.isChecked(),
             seed_input_box.text()
         ))
         bottom_layout.addWidget(do_randomization_button)
@@ -142,7 +162,7 @@ class MainWindow(QMainWindow):
 
 def do_randomization(randomize_battles: bool, randomize_battle_music: bool, randomize_battle_backgrounds: bool,
                      randomize_job_worlds: bool, randomize_job_weapons: bool, job_rando_logic: bool,
-                     randomize_treasure: bool, randomize_npcs: bool, randomize_dl: bool, seed: str):
+                     randomize_treasure: bool, randomize_npcs: bool, randomize_dl: bool, randomize_grub: bool, randomize_colors: bool, seed: str):
     if not seed:
         seed = random.randint(0, max_seed_value)
     else:
@@ -174,6 +194,14 @@ def do_randomization(randomize_battles: bool, randomize_battle_music: bool, rand
     if randomize_dl:
         if not randomization_wrapper(
                 'dark_lord', randomizationOptions.randomize_dl):
+            return
+    if randomize_grub:
+        if not randomization_wrapper(
+                'grub', randomizationOptions.randomize_grub):
+            return
+    if randomize_colors:
+        if not randomization_wrapper(
+                'color', randomizationOptions.randomize_colors):
             return
 
     with open(os.path.join('Output', 'seed.txt'), 'w') as f:

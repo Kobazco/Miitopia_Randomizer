@@ -61,6 +61,11 @@ def main():
         help='Randomizes the stats that Grub give on consumption,\n' +
              'as well as its sound effect and tastiness'
     )
+    parser.add_argument(
+        '--color', '-C',
+        action='store_true',
+        help='Randomizes the colors that armor/clothes have.'
+    )
     args = parser.parse_args()
 
     # If the user double-clicked the program, print the help and start a cmd session
@@ -101,6 +106,8 @@ def main():
         randomizationOptions.randomize_dl()
     if args.grub:
         randomizationOptions.randomize_grub()
+    if args.color:
+        randomizationOptions.randomize_colors()
 
 
 if __name__ == '__main__':

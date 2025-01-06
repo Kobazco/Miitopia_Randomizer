@@ -440,3 +440,33 @@ def randomize_grub():
     write_sarc_to_output(sarc_writer, 'dish.sarc')
 
     logger.info('Randomized Grub')
+
+def randomize_colors():
+    verify_input_files(required_files['color'])
+
+    logger = logging.getLogger('ColorRandomizer')
+    logger.info('Randomizing Equipment Colors...')
+
+    randomized_data = StringIO()
+    csv_writer = csv.writer(randomized_data)
+
+    source_rows = get_csv_rows_from_input_sarc('equipment.sarc', 'Color.csv')
+    for row in source_rows:
+        # Don't randomize favorite color (default Mii color)
+        if row[0] == 'Favorite':
+            csv_writer.writerow(row)
+            continue
+
+        row[1] = random.randint(0, 255)
+        row[2] = random.randint(0, 255)
+        row[3] = random.randint(0, 255)
+
+        csv_writer.writerow(row)
+
+    copy_input_to_output('equipment.sarc')
+    sarc_writer = get_writer_from_output_sarc('equipment.sarc')
+    randomized_data.seek(0)
+    sarc_writer.add_file('Color.csv', randomized_data.read().encode())
+    write_sarc_to_output(sarc_writer, 'equipment.sarc')
+
+    logger.info('Randomized Equipment Colors')
