@@ -43,6 +43,9 @@ options:
   --npcs, -N            Randomizes the NPCs models, as well as what enemy the Dark Lord is.
   --seed SEED, -S SEED  Specifies a seed to use for the randomization.
                         Useful if you want to play the same game with/against someone else
+  --grub -G             Randomizes the stats that Grub give on consumption,
+                        as well as its sound effect and tastiness
+  --color -C            Randomizes the colors that armor/clothes have.
 ```
 
 ### Building executables yourself
