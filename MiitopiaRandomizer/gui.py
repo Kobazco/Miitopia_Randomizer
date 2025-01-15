@@ -117,7 +117,7 @@ class MainWindow(QMainWindow):
         layout.addWidget(randomize_grub)
 
         # Equipment Colors randomization
-        randomize_colors = QCheckBox('Randomize Equipemnt Colors (BETA)', main_widget)
+        randomize_colors = QCheckBox('Randomize Equipment Colors (BETA)', main_widget)
         randomize_colors.setToolTip(
             'Randomizes the colors that armors/clothes have.'
         )
