@@ -118,6 +118,8 @@ def randomize_battles(is_switch: bool, randomize_music=True, randomize_backgroun
                     # Get all enemies with this new level
                     new_enemies = [enemy[0] for enemy in enemies if enemy[1] == random_level]
                     new_enemy = random.choice(new_enemies)
+                    while new_enemy == 'Goblin0_Dish':
+                        new_enemy = random.choice(new_enemies)
                     # If the new enemy is a boss with a set face, add its face
                     if new_enemy in boss_to_face_dict:
                         face_to_add = boss_to_face_dict[new_enemy]

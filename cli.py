@@ -10,14 +10,11 @@ from MiitopiaRandomizer.util import clear_output_dir, get_file_version
 
 
 # TODO: List of planned features:
-#  - Enemy Skills
+#  - Enemy Skills - might require elink, but that's insanely involved
 #  - Grub Bonuses - basic done
-#  - Randomly Create New Enemies
+#  - Randomly Create New Enemies - elink + more
 #  - Enemy Faces
-#  - NPC Clothes Colors
-#  - Include Job outfits in NPC Model Randomization
-#  - Clothes Colors
-#  - Job Skills
+#  - Job Skills - requires code edit/elink
 #  - Apply Random Dark Lord to Battles
 
 
@@ -58,13 +55,13 @@ def main():
     parser.add_argument(
         '--grub', '-G',
         action='store_true',
-        help='Randomizes the stats that Grub give on consumption,\n' +
+        help='(BETA) Randomizes the stats that Grub give on consumption,\n' +
              'as well as its sound effect and tastiness'
     )
     parser.add_argument(
         '--color', '-C',
         action='store_true',
-        help='Randomizes the colors that armor/clothes have.'
+        help='(BETA) Randomizes the colors that armor/clothes have.'
     )
     args = parser.parse_args()
 

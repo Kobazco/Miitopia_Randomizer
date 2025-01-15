@@ -108,7 +108,7 @@ class MainWindow(QMainWindow):
 
         # Misc options
         # Grub randomization
-        randomize_grub = QCheckBox('Randomize Grub', main_widget)
+        randomize_grub = QCheckBox('Randomize Grub (BETA)', main_widget)
         randomize_grub.setToolTip(
             'Randomizes what stats grub give when\n'
             'consumed by Miis. Also randomizes how full\n'
@@ -117,7 +117,7 @@ class MainWindow(QMainWindow):
         layout.addWidget(randomize_grub)
 
         # Equipment Colors randomization
-        randomize_colors = QCheckBox('Randomize Equipemnt Colors', main_widget)
+        randomize_colors = QCheckBox('Randomize Equipemnt Colors (BETA)', main_widget)
         randomize_colors.setToolTip(
             'Randomizes the colors that armors/clothes have.'
         )
